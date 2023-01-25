@@ -1,64 +1,107 @@
+:root {
+    --sky: #CDE3ED;
+    --heading: #196066;
+    --options: #2C3532;
+}
+
+
 /************************* TAG SELECTORS *************************/
 
 body {
     text-align: center;
     font: 100;
-    background-color: #ffffff;
+    background-color: var(--sky);
     margin: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     margin: 20px 20px 0px 20px;
-    padding: 20px;
-    color: #D9BB96;
+    padding: 20px 0 5px;
+    color: var(--heading);
+    font-size: 3em;
+    font-family: 'Bad Script', sans-serif;
+}
+
+h4 {
+    font-family: 'IBM Plex Mono', sans-serif;
+    color: var(--options);
+    font-weight: lighter;
 }
 
 
 /************************* CLASS SELECTORS ***********************/
 
+
+/******** TOP STYLING ***********/
+
+
+/******** NAV BAR STYLING *******/
+
 .profile {
     display: inline-block;
     position: absolute;
-    margin: 0 auto 0 auto;
-    left: 10px;
-    bottom: 0px;
+    left: 25%;
+    margin: 0;
+    padding: 0;
 }
 
 .profilepic {
-    width: 2em;
-    height: 2em;
+    width: 5em;
+    height: 5em;
     border-radius: 100%;
     background-color: #ffff;
 }
 
 .topbar {
-    background-color: #536173;
+    background-color: var(--sky);
     padding: 25px;
-    position: relative;
-    top: -10px;
-    left: 0px;
-    max-width: 100vw;
+    margin: 50px auto 50px auto;
+    width: 55%;
 }
 
 .navbar {
     display: inline-block;
-    position: absolute;
-    right: 0px;
-    bottom: 5px;
-    padding: 10px;
+    position: relative;
+    left: 25%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
 }
 
 .nav-text {
+    font-size: larger;
     text-decoration: none;
-    color: #F2DBAE;
-    margin: 1em;
+    color: var(--options);
+    margin: 0px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
+
+.nav-text:hover {
+    background-color: #2C3532;
+    color: white;
+}
+
+
+/******** IMAGE STYLING ***********/
 
 .top-cloud {
     height: auto;
     max-width: 8em;
     position: absolute;
-    top: 10em;
+    top: 15em;
+    left: 10em;
 }
 
 .left-cloud {
@@ -66,15 +109,15 @@ h1 {
     max-width: 12em;
     position: absolute;
     left: 2em;
-    top: 2em;
+    top: 7em;
 }
 
 .right-cloud {
     height: auto;
     max-width: 10em;
     position: absolute;
-    right: 2em;
-    top: 2em;
+    right: 7em;
+    top: 6em;
 }
 
 .forest {
@@ -86,23 +129,97 @@ h1 {
     z-index: 0;
 }
 
+.intro-blurb p {
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
 .top {
-    background-color: #7B92A6;
+    background-color: var(--sky);
+    position: relative;
+    top: -30px;
+    max-width: 100vw;
+    height: auto;
+}
+
+
+/******** MIDDLE STYLING ***********/
+
+.middle {
+    background-color: #ffff;
+    margin: 0;
     position: relative;
     top: -30px;
     max-width: 100vw;
 }
 
-.middle {
-    background-color: #888C81;
-    width: 200px;
-    height: 200px;
+.dots {
+    color: #D8B08C;
+    width: 3%;
+    height: 0px;
+    border: 15px dotted;
+    border-bottom: none;
+    margin: 10px auto 10px auto;
+    padding: 5px;
+    position: relative;
+    top: 15px;
 }
+
+.dev-skills-table {
+    display: inline-block;
+}
+
+.dev-skills-col {
+    padding: 5px 10vw 5px;
+}
+
+.dev-skill td {
+    padding: 10px 10px 20px;
+}
+
+
+/******** BOTTOM STYLING ***********/
 
 .bottom {
-    background-color: #3D403A;
-    width: 200px;
-    height: 200px;
+    background-color: var(--sky);
+    position: relative;
+    bottom: -30px;
+    max-width: 100vw;
+    height: auto;
 }
 
-.heading {}
+.social-links {
+    list-style-type: none;
+    width: auto;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 0%);
+    padding: 10px 10px 5px;
+}
+
+.social-links a {
+    color: var(--options);
+    font-size: larger;
+    text-decoration: none;
+    position: relative;
+    top: 0px;
+    margin: 0px 30px 10px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    background-color: #2C3532;
+    color: white;
+}
+
+.copyright {
+    font-size: small;
+    padding-bottom: 10px;
+}
