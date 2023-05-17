@@ -80,20 +80,13 @@
 .socials a:hover {
   color: #F5F0AF;
 }
-.row.intro-blurb {
+.intro-blurb {
   color:#5C6C4F;
-  max-width:100%;
-  height: fit-content;
-  padding: 10% 10% 10% 10%;
+
 
 }
-.intro-blurb h1{
-  /*font-size: xx-large;*/
-  margin-bottom: 30px;
-}
-.intro-blurb p{
-  /*font-size: large;*/
-}
+
+
 .mid{
   /*background-color: #BBCFC6;*/
   padding: 2%;

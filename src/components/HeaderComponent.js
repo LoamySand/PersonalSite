@@ -7,14 +7,14 @@ class Header extends Component {
         return (
             <Navbar className='background' id='navbar'>
                 <Container>
-                    <Navbar.Brand href="/">
-                        <Image
-                            src='/favicon.png' alt='profile'
-                            width="60"
-                            height="60"
-                            roundedCircle
-                            className="d-inline-block align-top rounded"/>
-                    </Navbar.Brand>
+                    {/*<Navbar.Brand href="/">*/}
+                    {/*    <Image*/}
+                    {/*        src='/favicon.png' alt='profile'*/}
+                    {/*        width="60"*/}
+                    {/*        height="60"*/}
+                    {/*        roundedCircle*/}
+                    {/*        className="d-inline-block align-top rounded"/>*/}
+                    {/*</Navbar.Brand>*/}
                     <Nav id="topbar" className='ms-auto'>
                         <Nav.Item>
                             <NavLink className='nav-link'

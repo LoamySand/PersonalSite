@@ -9,12 +9,15 @@ function Home() {
             <div className="background">
                 <Row className="text-center">
                     {/*TODO Make one column on small screen*/}
-                    <Col className="float-left">
-                        <Row className="intro-blurb">
+                    <Col className="float-left ">
+                        <Row className='justify-content-center'>
+                            <Image className='w-75' src='/title.png'/>
+                            <Image roundedCircle className='profile-pic w-50' src='/profile.png'/>
+                        </Row>
+                        <Row className="mb-3 mt-3 intro-blurb">
                             <Stack>
-                                <h1 className='display-3 fs-1'><strong>Hi! I'm Lane</strong></h1>
-                                <h6 className='display-6 fs-4'>Developer by day,</h6>
-                                <h6 className='display-6 fs-5'>So very sleepy by night.</h6>
+                                <h6 className='display-6 fs-3'>Developer by day,</h6>
+                                <h6 className='display-6 fs-4'>So very sleepy by night.</h6>
                             </Stack>
                         </Row>
                     </Col>
@@ -124,7 +127,9 @@ function Home() {
                         <h1 className='display-3 fs-1'>Previous Experience</h1>
                     </Col>
                 </Row>
-                <Row></Row>
+                <Row>
+
+                </Row>
                 <Row>
 
                 </Row>
