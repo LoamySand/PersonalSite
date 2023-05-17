@@ -1,0 +1,47 @@
+import React, {Component} from "react";
+import {Container, Image, Nav, Navbar} from "react-bootstrap";
+import {NavLink} from "react-router-dom";
+
+class Header extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render(){
+        return (
+            <Navbar className='top' id='navbar'>
+                <Container>
+                    <Navbar.Brand href="/">
+                        <Image
+                            src='/favicon.png' alt='profile'
+                            width="60"
+                            height="60"
+                            roundedCircle
+                            className="d-inline-block align-top rounded"/>
+                    </Navbar.Brand>
+                    <Nav id="topbar" className='ms-auto'>
+                        <Nav.Item>
+                            <NavLink className='nav-link'
+                                     to='/'>
+                                <h5 className="nav-options">About</h5>
+                            </NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink className='nav-link '
+                                     to='/portfolio'>
+                                <h5 className="nav-options">
+                                Portfolio</h5></NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink className='nav-link'
+                                     to='/contact'>
+                                <h5 className="nav-options">Contact</h5>
+                            </NavLink>
+                        </Nav.Item>
+                    </Nav>
+                </Container>
+            </Navbar>
+        )
+    }
+}
+
+export default Header;
