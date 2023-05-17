@@ -3,12 +3,9 @@ import {Container, Image, Nav, Navbar} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-    }
     render(){
         return (
-            <Navbar className='top' id='navbar'>
+            <Navbar className='background' id='navbar'>
                 <Container>
                     <Navbar.Brand href="/">
                         <Image

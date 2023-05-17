@@ -3,6 +3,7 @@ import {Container, Nav, Navbar, Image, Col, Row, Stack} from "react-bootstrap";
 import {NavLink, Route, Routes, Redirect} from 'react-router-dom';
 import Home from "./HomeComponent";
 import Header from "./HeaderComponent";
+import Footer from "./FooterComponent";
 //import {Col, Row} from "reactstrap";
 
 class Main extends Component {
@@ -19,6 +20,7 @@ class Main extends Component {
                     <Route exact path='/portfolio'/>
                     <Route exact path='/contact'/>
                 </Routes>
+                <Footer/>
             </div>
         )
     }

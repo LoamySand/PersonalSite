@@ -6,15 +6,15 @@ import {NavLink} from "react-router-dom";
 function Home() {
     return(
         <div>
-            <div className="top">
+            <div className="background">
                 <Row className="text-center">
                     {/*TODO Make one column on small screen*/}
                     <Col className="float-left">
                         <Row className="intro-blurb">
                             <Stack>
-                                <h1>Hi! I'm Lane</h1>
-                                <p>Developer by day,</p>
-                                <p>So very sleepy by night</p>
+                                <h1 className='display-3 fs-1'><strong>Hi! I'm Lane</strong></h1>
+                                <h6 className='display-6 fs-4'>Developer by day,</h6>
+                                <h6 className='display-6 fs-5'>So very sleepy by night.</h6>
                             </Stack>
                         </Row>
                     </Col>
@@ -29,21 +29,22 @@ function Home() {
             <div className="mid text-center">
                 <Row className="hr justify-content-center">
                     <Col md="auto" className="">
-                        <h1>Skills at a Glance</h1>
+                        <h1 className='display-3 fs-1'>Skills at a Glance</h1>
                     </Col>
                 </Row>
-                <Row>
-                    <h3>Design and Development</h3>
-                    <h4 className="blockquote p-3">“Absorb what is useful, Discard what is not, Add what is uniquely your own.” — Bruce Lee</h4>
+                <Row className='mb-lg-5'>
+                    <h3 className='display-3 fs-1'>Design and Development</h3>
+                    <blockquote className="blockquote fs-5 pt-3">“Absorb what is useful, Discard what is not, Add what is uniquely your own.”</blockquote>
+                    <figcaption class='blockquote-footer fs-6'>Bruce Lee</figcaption>
                     <div className='align-items-center '>
-                        <Table className="skills-table d-inline-block m-4">
+                        <Table className="skills-table d-inline-block m-4 ">
                             <thead className='text-start'>
                             <tr>
                                 <th className='skill-title'>Languages</th>
                                 <th></th>
                             </tr>
                             </thead>
-                            <td>
+                            <td className='fs-1'>
                                 <Table hover className="">
                                     <tr className="skill">
                                         <td>C++</td>
@@ -117,8 +118,17 @@ function Home() {
                             </td>
                         </Table>
                     </div>
+                </Row>
+                <Row className="hr justify-content-center">
+                    <Col md="auto" className="">
+                        <h1 className='display-3 fs-1'>Previous Experience</h1>
+                    </Col>
+                </Row>
+                <Row></Row>
+                <Row>
 
                 </Row>
+
             </div>
         </div>
     )
