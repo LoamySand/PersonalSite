@@ -128,7 +128,7 @@ function Home() {
                     </Col>
                 </Row>
                 <Row>
-
+                    <h1>...</h1>
                 </Row>
                 <Row>
 

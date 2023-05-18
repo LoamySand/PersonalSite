@@ -5,6 +5,7 @@ import Home from "./HomeComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Contact from "./ContactComponent";
+import Calendar from "./CalendarComponent";
 //import {Col, Row} from "reactstrap";
 
 class Main extends Component {
@@ -19,11 +20,11 @@ class Main extends Component {
                 <Routes>
                     <Route exact path='/' element={Home()}/>
                     <Route exact path='/portfolio'/>
-                    <Route exact path='/contact' component={() =>
-                        <Contact resetFeedbackForm={this.props.resetFeedbackForm}
-                            postFeedback={this.props.postFeedback}/>}/>
+                    <Route exact path='/contact' element={ <Contact />}/>
+                    <Route exact path='/calendar' element={<Calendar/>}/>
                 </Routes>
                 <Footer/>
+
             </div>
         )
     }

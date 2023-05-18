@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
-import {Button, Col, Form, FormControl} from 'react-bootstrap';
+import {Button, ButtonGroup, Col, Form, FormControl, Row} from 'react-bootstrap';
+import MapSection from './map/Map';
+
+const location = {
+    address: '',
+    lat: 34.7445,
+    lng: -92.2880,
+}
+
 class Contact extends Component {
+
     constructor(props) {
         super(props);
 
@@ -19,217 +28,103 @@ class Contact extends Component {
                 email: false
             }
         };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleBlur = this.handleBlur.bind(this);
+        // this.handleInputChange = this.handleInputChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleBlur = this.handleBlur.bind(this);
     }
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked :
-            target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
-    handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Thank You for your Feedback! ' + JSON.stringify(values));
-        this.props.resetFeedbackForm();
-        this.props.postFeedback(values)
-        // event.preventDefault();
-    }
-    validate(firstname, lastname, telnum, email) {
-        const errors = {
-            firstname: '',
-            lastname: '',
-            telnum: '',
-            email: ''
-        };
-        if (this.state.touched.firstname && firstname.length < 3)
-            errors.firstname = 'First Name should be >= 3 characters';
-        else if (this.state.touched.firstname && firstname.length > 10)
-            errors.firstname = 'First Name should be <= 10 characters';
-        if (this.state.touched.lastname && lastname.length < 3)
-            errors.lastname = 'Last Name should be >= 3 characters';
-        else if (this.state.touched.lastname && lastname.length > 10)
-            errors.lastname = 'Last Name should be <= 10 characters';
-        const reg = /^\d+$/;
-        if (this.state.touched.telnum && !reg.test(telnum))
-            errors.telnum = 'Tel. Number should contain only numbers';
-        if(this.state.touched.email && email.split('').filter(x => x ===
-            '@').length !== 1)
-            errors.email = 'Email should contain a @';
-        return errors;
-    }
+    // handleInputChange(event) {
+    //     const target = event.target;
+    //     const value = target.type === 'checkbox' ? target.checked :
+    //         target.value;
+    //     const name = target.name;
+    //
+    //     this.setState({
+    //         [name]: value
+    //     });
+    // }
+    // handleSubmit(values) {
+    //     console.log('Current State is: ' + JSON.stringify(values));
+    //     alert('Thank You for your Feedback! ' + JSON.stringify(values));
+    //     this.props.resetFeedbackForm();
+    //     this.props.postFeedback(values);
+    //     // event.preventDefault();
+    // }
+    // validate(firstname, lastname, telnum, email) {
+    //     const errors = {
+    //         firstname: '',
+    //         lastname: '',
+    //         telnum: '',
+    //         email: ''
+    //     };
+    //     if (this.state.touched.firstname && firstname.length < 3)
+    //         errors.firstname = 'First Name should be >= 3 characters';
+    //     else if (this.state.touched.firstname && firstname.length > 10)
+    //         errors.firstname = 'First Name should be <= 10 characters';
+    //     if (this.state.touched.lastname && lastname.length < 3)
+    //         errors.lastname = 'Last Name should be >= 3 characters';
+    //     else if (this.state.touched.lastname && lastname.length > 10)
+    //         errors.lastname = 'Last Name should be <= 10 characters';
+    //     const reg = /^\d+$/;
+    //     if (this.state.touched.telnum && !reg.test(telnum))
+    //         errors.telnum = 'Tel. Number should contain only numbers';
+    //     if(this.state.touched.email && email.split('').filter(x => x ===
+    //         '@').length !== 1)
+    //         errors.email = 'Email should contain a @';
+    //     return errors;
+    // }
 
     render(){
-        const errors = this.validate(this.state.firstname,
-            this.state.lastname, this.state.telnum, this.state.email);
+        // const errors = this.validate(this.state.firstname,
+        //     this.state.lastname, this.state.telnum, this.state.email);
 
         return(
-            <div className="container">
-                <div className='row'>
-                    <div className='col-12'>
-                        <h3>Get in Touch!</h3>
-                        <hr />
-                    </div>
-                </div>
-                <div className="row row-content">
-                    <div className="col-12">
-                        <h3>Location Information</h3>
-                    </div>
-                    <div className="col-12 col-sm-4 offset-sm-1">
-                        <h5>Our Address</h5>
-                        <address>
-                            121, Clear Water Bay Road<br />
-                            Clear Water Bay, Kowloon<br />
-                            HONG KONG<br />
-                            <i className="fa fa-phone"></i>: +852 1234 5678<br />
-                            <i className="fa fa-fax"></i>: +852 8765 4321<br />
-                            <i className="fa fa-envelope"></i>: <a
-                            href="mailto:confusion@food.net">confusion@food.net</a>
+            <div className="container mid">
+                <Row className="hr justify-content-center">
+                    <Col md="auto" className="">
+                        <h1 className='display-3 fs-1'>Get in Touch!</h1>
+                    </Col>
+                </Row>
+                <div className="row row-content  text-center">
+                    <div className="col-6  mb-0 p-5">
+                        <h3 className='display-3 fs-1 mb-5'>Ways to Reach Me</h3>
+                        <address className='text-start'>
+                            <i className="fa fa-phone fa-2x me-4 mb-4"></i><span className='fs-4 mb-2'>(501) 444-2664</span><a role="button" className="btn btn-md btn-outline-primary p-2 px-3  w-25 float-end" href="tel:+5014442664"><i className="fa fa-phone"></i> Call</a> <br />
+                            <i className="fa fa-envelope fa-2x me-4 "></i><a className=' fs-4' href="mailto:confusion@food.net">laneeboyd@gmail.com</a> <a role="button" className="btn btn-outline-success p-2 px-2 w-25 ms-4 float-end" href="mailto:laneeboyd@gmail.com"><i className="fa fa-envelope-o"></i>  Email</a>
                         </address>
                     </div>
-                    <div className="col-12 col-sm-6 offset-sm-1">
-                        <h5>Map of our Location</h5>
+                    <div className="col-6 mb-0 p-5">
+                        <h3 className='display-3 fs-1 mb-3 text-center'>Y'all Live 'Round Here?</h3>
+                        <MapSection location={location} zoomLevel={11}/>
+                        <p className='fs-3 mt-4'>Let's get coffee!</p>
+                         <a className="btn btn-outline-info " href="/calendar"><i className="fa fa-coffee"></i> Calendar</a>
                     </div>
-                    <div className="col-12 col-sm-11 offset-sm-1">
-                        <div className="btn-group" role="group">
-                            <a role="button" className="btn btn-primary"
-                               href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
-                            <a role="button" className="btn btn-info"><i
-                                className="fa fa-skype"></i> Skype</a>
-                            <a role="button" className="btn btn-success"
-                               href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i>
-                                Email</a>
-                        </div>
+                    <div className="col-12 col-sm-11 offset-sm-1 ">
+
                     </div>
                 </div>
-                <div className="row row-content">
+                <div className="row message-form">
                     <div className="col-12">
-                        <h3>Send us your Feedback</h3>
+                        <h3 className="display-3 fs-1 mb-3 ">Leave a message</h3>
                     </div>
                     <div className="col-12 col-md-9">
-                        <Form model="feedback" onSubmit={(values) => this.handleSubmit(values)}>
-                            <Form.Group row>
-                                <Form.Label htmlFor="firstname" md={2}>First
-                                    Name</Form.Label>
-                                <Col md={10}>
-                                    <FormControl model='.firstname' type="text" id="firstname"
-                                                  name="firstname"
-                                                  placeholder="First Name"
-                                                  className='form-control'
-                                                  value={this.state.firstname}
-                                                  valid={errors.firstname === ''}
-                                                  invalid={errors.firstname !== ''}
-                                                  onBlur={this.handleBlur('firstname')}
-                                                  onChange={this.handleInputChange}
-                                    />
-                                    <Form.Control.Feedback>
-                                        {errors.firstname}
-                                    </Form.Control.Feedback>
-                                </Col>
+                        <Form>
+                            <Form.Group className="mb-3" controlId="form.nameInput">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control type="text" placeholder="John Doe"/>
                             </Form.Group>
-                            <Form.Group row>
-                                <Form.Label htmlFor="lastname" md={2}>Last
-                                    Name</Form.Label>
-                                <Col md={10}>
-                                    <FormControl model='.lastname' type="text" id="lastname"
-                                                  name="lastname"
-                                                  placeholder="Last Name"
-                                                  className='form-control'
-                                                  value={this.state.lastname}
-                                                  valid={errors.lastname === ''}
-                                                  invalid={errors.lastname !== ''}
-                                                  onBlur={this.handleBlur('lastname')}
-                                                  onChange={this.handleInputChange}
-                                    />
-                                    <FormControl.Feedback>
-                                        {errors.lastname}
-                                    </FormControl.Feedback>
-                                </Col>
+                            <Form.Group className="mb-3" controlId="form.emailInput">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="email" placeholder="email@email.com"/>
                             </Form.Group>
-                            <Form.Group row>
-                                <Form.Label htmlFor="telnum" md={2}>Contact
-                                    Tel.</Form.Label>
-                                <Col md={10}>
-                                    <FormControl model='.telnum' type="tel" id="telnum"
-                                                  name="telnum"
-                                                  placeholder="Tel. number"
-                                                  className='form-control'
-                                                  value={this.state.telnum}
-                                                  valid={errors.telnum === ''}
-                                                  invalid={errors.telnum !== ''}
-                                                  onBlur={this.handleBlur('telnum')}
-                                                  onChange={this.handleInputChange}
-                                    />
-                                    <FormControl.Feedback>
-                                        {errors.telnum}
-                                    </FormControl.Feedback>
-                                </Col>
+                            <Form.Group className="mb-3" controlId="form.telInput">
+                                <Form.Label>Phone Number</Form.Label>
+                                <Form.Control type="tel" placeholder="0000000000"/>
                             </Form.Group>
-                            <Form.Group row>
-                                <Form.Label htmlFor="email" md={2}>Email</Form.Label>
-                                <Col md={10}>
-                                    <FormControl model='.email' type="email" id="email"
-                                                  name="email"
-                                                  placeholder="Email"
-                                                  className='form-control'
-                                                  value={this.state.email}
-                                                  valid={errors.email === ''}
-                                                  invalid={errors.email !== ''}
-                                                  onBlur={this.handleBlur('email')}
-                                                  onChange={this.handleInputChange}
-                                    />
-                                    <FormControl.Feedback>
-                                        {errors.email}
-                                    </FormControl.Feedback>
-                                </Col>
+                            <Form.Group className="mb-3" controlId="form.messageInput">
+                                <Form.Label>Message</Form.Label>
+                                <Form.Control as="textarea" rows={5} />
                             </Form.Group>
-                            <Form.Group row>
-                                <Col md={{size: 6, offset: 2}}>
-                                    <Form.Group check>
-                                        <FormControl model='.agree' type="checkbox"
-                                                          className='form-control'
-                                                          name="agree"
-                                                          checked={this.state.agree}
-                                                          onChange={this.handleInputChange} />
-                                        <Form.Label htmlfor='agree'>
-                                            <strong>May we contact
-                                                you?</strong>
-                                        </Form.Label>
-                                    </Form.Group>
-                                </Col>
-                                <Col md={{size: 3, offset: 1}}>
-                                    <Form.Control model='.contactType' type="select" name="contactType" className='form-control'
-                                                    value={this.state.contactType}
-                                                    onChange={this.handleInputChange}>
-                                        <option>Tel.</option>
-                                        <option>Email</option>
-                                    </Form.Control>
-                                </Col>
-                            </Form.Group>
-                            <Form.Group row>
-                                <Form.Label htmlFor="message" md={2}>Your
-                                    Feedback</Form.Label>
-                                <Col md={10}>
-                                    <FormControl model='.message' type="textarea" id="message"
-                                                      name="message"
-                                                      rows="12"
-                                                      cols={55}
-                                                      value={this.state.message}
-                                                      onChange={this.handleInputChange}></FormControl>
-                                </Col>
-                            </Form.Group>
-                            <Form.Group row>
-                                <Col md={{size: 10, offset: 2}}>
-                                    <Button type="submit" color="primary">
-                                        Send Feedback
-                                    </Button>
-                                </Col>
-                            </Form.Group>
+
                         </Form>
                     </div>
                 </div>
