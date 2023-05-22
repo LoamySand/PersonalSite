@@ -1,0 +1,69 @@
+import {Button, Form} from "react-bootstrap";
+import React from "react";
+import { Field, reduxForm } from 'redux-form';
+
+const validate = values => {
+    const errors={}
+    if (!values.name) {
+        errors.name='Required'
+    } else if (values.name.length < 4) {
+        errors.name='Minimum 4 letters'
+    }
+    if (!values.email) {
+        errors.email = 'Required'
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+        errors.email = 'Invalid email address'
+    }
+    return errors
+}
+const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+        <div>
+            {touched && ((error && <span className="text-danger">{error}</span>) || (warning && <span>{warning}</span>))}
+
+            <label className="control-label ms-1">{label}</label>
+            <div>
+                <input {...input} type={type} className="form-control mt-2 mb-3" />
+            </div>
+        </div>
+    )
+const renderTextField = ({ textarea, label, type, meta: { touched, error, warning } }) => (
+    <div>
+        <label className="control-label ms-1">{label}</label>
+        <div>
+            <span>{textarea}</span>
+            <textarea {...textarea} rows="5"  className='form-control textarea mt-2 mb-3'/>
+            {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+        </div>
+    </div>
+)
+
+let FormCode = props => {
+    const { handleSubmit, pristine, submitting } = props;
+    return (
+
+            <Form onSubmit={ handleSubmit } className='rounded border border-3 p-4'>
+{/*<span className='border border-5'></span>*/}
+                <Form.Group>
+                <Field name='name' component={renderField} label='Your Name'/>
+                </Form.Group>
+                <Form.Group>
+                    <Field name='email' component={renderField} label='Your Email'/>
+                </Form.Group>
+                <Form.Group>
+                    <Field name='tel' component={renderField} label='Your Phone Number'/>
+                </Form.Group>
+                <Form.Group>
+                    <Field name='message' component={renderTextField} label='Message'/>
+                </Form.Group>
+                <Button type='submit' disabled={pristine || submitting} className='ms-3 btn-lg'>Submit</Button>
+
+</Form>
+
+    )
+}
+FormCode = reduxForm({
+    form: 'contact',
+    validate,
+})(FormCode);
+
+export default FormCode;

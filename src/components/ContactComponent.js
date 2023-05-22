@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Button, ButtonGroup, Col, Form, FormControl, Row} from 'react-bootstrap';
+import { Col, Row} from 'react-bootstrap';
 import MapSection from './map/Map';
+import FormCode from './ContactFormComponent';
 
 const location = {
     address: '',
@@ -14,16 +15,13 @@ class Contact extends Component {
         super(props);
 
         this.state = {
-            firstname: '',
-            lastname: '',
-            telnum: '',
+            name: '',
+            tel: '',
             email: '',
-            agree: false,
-            contactType: 'Tel.',
+            preferredContact: 'Phone',
             message: '',
             touched: {
-                firstname: false,
-                lastname: false,
+                name: false,
                 telnum: false,
                 email: false
             }
@@ -79,20 +77,20 @@ class Contact extends Component {
 
         return(
             <div className="container mid">
-                <Row className="hr justify-content-center">
+                <Row className="hr justify-content-center text-center">
                     <Col md="auto" className="">
                         <h1 className='display-3 fs-1'>Get in Touch!</h1>
                     </Col>
                 </Row>
                 <div className="row row-content  text-center">
-                    <div className="col-6  mb-0 p-5">
+                    <div className="col-md-6 col-12 mb-0 p-5">
                         <h3 className='display-3 fs-1 mb-5'>Ways to Reach Me</h3>
                         <address className='text-start'>
                             <i className="fa fa-phone fa-2x me-4 mb-4"></i><span className='fs-4 mb-2'>(501) 444-2664</span><a role="button" className="btn btn-md btn-outline-primary p-2 px-3  w-25 float-end" href="tel:+5014442664"><i className="fa fa-phone"></i> Call</a> <br />
                             <i className="fa fa-envelope fa-2x me-4 "></i><a className=' fs-4' href="mailto:confusion@food.net">laneeboyd@gmail.com</a> <a role="button" className="btn btn-outline-success p-2 px-2 w-25 ms-4 float-end" href="mailto:laneeboyd@gmail.com"><i className="fa fa-envelope-o"></i>  Email</a>
                         </address>
                     </div>
-                    <div className="col-6 mb-0 p-5">
+                    <div className="col-md-6 col-12 mb-0 p-5">
                         <h3 className='display-3 fs-1 mb-3 text-center'>Y'all Live 'Round Here?</h3>
                         <MapSection location={location} zoomLevel={11}/>
                         <p className='fs-3 mt-4'>Let's get coffee!</p>
@@ -102,30 +100,12 @@ class Contact extends Component {
 
                     </div>
                 </div>
-                <div className="row message-form">
-                    <div className="col-12">
-                        <h3 className="display-3 fs-1 mb-3 ">Leave a message</h3>
+                <div className="row message-form mb-4 w-100">
+                    <div className="col-12 text-center">
+                        <h3 className="display-3 fs-1 mb-5 ">Leave a message</h3>
                     </div>
-                    <div className="col-12 col-md-9">
-                        <Form>
-                            <Form.Group className="mb-3" controlId="form.nameInput">
-                                <Form.Label>Name</Form.Label>
-                                <Form.Control type="text" placeholder="John Doe"/>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="form.emailInput">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="email@email.com"/>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="form.telInput">
-                                <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="tel" placeholder="0000000000"/>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="form.messageInput">
-                                <Form.Label>Message</Form.Label>
-                                <Form.Control as="textarea" rows={5} />
-                            </Form.Group>
-
-                        </Form>
+                    <div className="col-md-6 col-12 mx-auto">
+                        <FormCode onSubmit={this.submit}/>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
-import react, {Component} from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import React, {Component} from 'react';
+import { NavLink} from 'react-router-dom';
 import {Navbar, Nav} from "react-bootstrap";
 
 class Footer extends Component {
@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
             <div className="footer">
                 <div className="container">
-                    <div className='row'>
+                    <div className='row p-4'>
                         <div className="col-6 ">
                                 <Navbar className='float-center'>
                                     <Nav id="bottom-nav">

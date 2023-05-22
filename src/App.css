@@ -1,3 +1,8 @@
+/*body{*/
+/*  margin:0;*/
+/*  padding:0;*/
+/*}*/
+
 .App {
   text-align: center;
 }
@@ -39,12 +44,23 @@
 
 .background {
   background-color: #D3E7EB;
+  /*width:100%;*/
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 /*.nav-options{*/
 /*  color:#5C6C4F;*/
 /*  margin:1vw;*/
 /*  text-decoration: none;*/
 /*}*/
+.honeyComb{
+  overflow:hidden;
+  padding: 0 !important;
+}
 
 #topbar a {
   text-decoration: none;
@@ -100,12 +116,36 @@
 .skills-table{
   max-width: fit-content;
 }
-.skill-title {
-  font-size: 1.5rem;
+.skills-row {
+  padding:0 !important;
 }
+@media (min-width: 1200px) {
 
-.skill td{
-  padding:14px;
-  font-size: 1.5rem;
+  .skill-title {
+    font-size: 2rem;
+  }
+  .skill td {
+    padding: 14px;
+    font-size: 1.5rem;
+  }
 }
-
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .skill-title {
+    font-size: 1.5rem;
+  }
+  .skill td {
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
+/*.skill td{*/
+/*  padding:14px;*/
+/*  font-size: 1.5vw;*/
+/*}*/
+.experience-icon{
+  max-width: 10vw;
+}
+textarea{
+  max-width:100%;
+}
