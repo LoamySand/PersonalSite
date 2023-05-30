@@ -1,6 +1,6 @@
-import {Button, Form} from "react-bootstrap";
+import {Button, Col, Form, Row} from "react-bootstrap";
 import React from "react";
-import { Field, reduxForm } from 'redux-form';
+import {Field, reduxForm, reset} from 'redux-form';
 
 const validate = values => {
     const errors={}
@@ -14,11 +14,16 @@ const validate = values => {
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
         errors.email = 'Invalid email address'
     }
+    if(!values.tel) {
+        errors.tel = 'Required'
+    } else if (values.tel.match(/^\d{10}$/)) {
+        errors.tel = 'Invalid phone number'
+    }
     return errors
 }
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
         <div>
-            {touched && ((error && <span className="text-danger">{error}</span>) || (warning && <span>{warning}</span>))}
+            {touched && ((error && <span className="text-danger row ms-1">{error}</span>) || (warning && <span>{warning}</span>))}
 
             <label className="control-label ms-1">{label}</label>
             <div>
@@ -26,6 +31,14 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
             </div>
         </div>
     )
+
+const renderRadio = ({ input, label, type, meta: { touched, error, warning } }) => (
+    <div>
+        {touched && ((error && <span className="text-danger row ms-1">{error}</span>) || (warning && <span>{warning}</span>))}
+
+    </div>
+)
+
 const renderTextField = ({ textarea, label, type, meta: { touched, error, warning } }) => (
     <div>
         <label className="control-label ms-1">{label}</label>
@@ -53,9 +66,26 @@ let FormCode = props => {
                     <Field name='tel' component={renderField} label='Your Phone Number'/>
                 </Form.Group>
                 <Form.Group>
+                    <label>Preferred Contact Method</label>
+                    <Row className="ms-1 mb-3 mt-2">
+                        <Col className='col-2'>
+                            <Field name="preferredContact" className="form-check" component={"input"} type='radio' value='email' id='email' checked/>
+                            <label htmlFor="email" className="form-check-label">Email</label>
+                        </Col>
+                        <Col className='col-2'>
+                            <Field name="preferredContact" className="form-check" component={"input"} type='radio' value='text' label='text'/>
+                            <label htmlFor="email" className="form-check-label">Text</label>
+                        </Col>
+                        <Col className='col-2'>
+                            <Field name="preferredContact" className="form-check" component={"input"} type='radio' value='phone' label='phone'/>
+                            <label htmlFor="email" className="form-check-label">Phone</label>
+                        </Col>
+                    </Row>
+                </Form.Group>
+                <Form.Group>
                     <Field name='message' component={renderTextField} label='Message'/>
                 </Form.Group>
-                <Button type='submit' disabled={pristine || submitting} className='ms-3 btn-lg'>Submit</Button>
+                <Button type='submit' disabled={pristine || submitting}  className='ms-3 btn-lg'>Submit</Button>
 
 </Form>
 

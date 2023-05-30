@@ -6,24 +6,25 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <div className="container">
+                {/*TODO RESPONSIVE*/}
+                <div className="container ">
                     <div className='row p-4'>
-                        <div className="col-6 ">
-                                <Navbar className='float-center'>
+                        <div className="col-md-6 col-12 ">
+                                <Navbar className='justify-content-center'>
                                     <Nav id="bottom-nav">
                                         <Nav.Item>
-                                            <NavLink className='nav-link' href='/'><h5 className="display-6 fs-4">Home</h5></NavLink>
+                                            <NavLink className='nav-link' to='/'><h5 className="display-6 fs-4">Home</h5></NavLink>
                                         </Nav.Item>
-                                        <Nav.Item>
-                                            <NavLink className='nav-link' to='/portfolio'><h5 className="display-6 fs-4">Portfolio</h5></NavLink>
-                                        </Nav.Item>
+                                        {/*<Nav.Item>*/}
+                                        {/*    <NavLink className='nav-link' to='/portfolio'><h5 className="display-6 fs-4">Portfolio</h5></NavLink>*/}
+                                        {/*</Nav.Item>*/}
                                         <Nav.Item>
                                             <NavLink className='nav-link' to='/Contact'><h5 className="display-6 fs-4">Contact</h5></NavLink>
                                         </Nav.Item>
                                     </Nav>
                                 </Navbar>
                         </div>
-                        <div className="col-6 my-auto">
+                        <div className="col-md-6 col-12 mx-auto">
                                 <div className="text-center socials">
                                     <a className="btn"
                                        href="https://github.com/LoamySand" target='_blank'><i className="fa fa-github"></i></a>

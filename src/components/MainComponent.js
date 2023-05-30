@@ -4,7 +4,7 @@ import Home from "./HomeComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Contact from "./ContactComponent";
-import Calendar from "./CalendarComponent";
+import Calendar from "./MeetingComponent";
 
 class Main extends Component {
     constructor(props) {

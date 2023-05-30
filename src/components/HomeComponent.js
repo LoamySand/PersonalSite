@@ -9,7 +9,6 @@ function Home() {
             <div className="background">
                 <div>
                 <Row className="text-center">
-                    {/*TODO Make one column on small screen*/}
                     <Col className="float-left ">
                         <Row className='justify-content-center'>
                             <Image className='w-75' src='/title.png'/>
@@ -42,6 +41,7 @@ function Home() {
                     <blockquote className="blockquote fs-5 pt-3">“Absorb what is useful, Discard what is not, Add what is uniquely your own.”</blockquote>
                     <figcaption className='blockquote-footer fs-6'>Bruce Lee</figcaption>
                     <div className='align-items-center'>
+                        {/*TODO Move to SkillsComponent*/}
                         <Table borderless className="skills-table d-inline-block m-4 ">
                             <thead className='text-start'>
                                 <tr>
@@ -153,61 +153,68 @@ function Home() {
                         <h1 className='display-3 fs-1'>Previous Experience</h1>
                     </Col>
                 </Row>
+                {/*TODO move to ExperienceComponent*/}
+                {/*TODO fill out experience blocks*/}
                 <Row className='text-start'>
-                    <Row className='justify-content-start py-5 my-4'>
+                    <Row className='justify-content-start pb-5 my-4'>
                         <Col className="col-md-2 col-2 offset-1 text-center my-auto">
-                            <Image className="experience-icon" roundedCircle src='/profile.png'/>
+                            <span className='fa-stack fa-5x'>
+                            <i className="fa fa-circle fa-stack-2x"></i>
+                            <i className="fa fa-graduation-cap fa-stack-1x experience-icon"></i>
+                            </span>
+                            {/*<Image className="experience-icon" roundedCircle src='/profile.png'/>*/}
                         </Col>
                         <Col className=" col-md-6 offset-2 p-4">
                             <h6 className='display-6 fs-4'>B.S in Computer Science | Minor in Mathematics</h6>
                             <h6 className='display-6 fs-6'>University of Arkansas at Little Rock - Donaghey Scholar Full ride Recipient</h6>
                             <blockquote className="blockquote fs-6">
-                                <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.consectetur adipiscing elit.
-                                    Integer posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                <p className="mb-0">I spent four years deep diving into the state of the art, industry standard technologies that are used to build the world we see today. I designed and engineered software, hardware, operating systems, and databases. I gained insight into the fundamentals of information transfer and computation theory.</p>
                             </blockquote>
                         </Col>
                     </Row>
                     <Row className='justify-content-start'>
                         <Col className=" col-md-6 offset-1 p-4">
-                            <h6 className='display-6 fs-4'>B.S in Computer Science | Minor in Mathematics</h6>
-                            <h6 className='display-6 fs-6'>University of Arkansas at Little Rock - Donaghey Scholar Full ride Recipient</h6>
+                            <h6 className='display-6 fs-4'>Barista</h6>
+                            <h6 className='display-6 fs-6'>Starbucks</h6>
                             <blockquote className="blockquote fs-6">
-                                <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.consectetur adipiscing elit.
-                                    Integer posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                <p className="mb-0">Through this humble beginning, I learned essential teamwork skills. Constantly pushing the team to perform better and better. We worked tirelessly to provide the best possible experience for each guest and create a sacred and friendly 'Third Place', strengthening our empathy and communication skills in the process.</p>
                             </blockquote>
                         </Col>
                         <Col className="col-md-2 col-2 offset-2 text-center my-auto">
-                            <Image className="experience-icon" roundedCircle src='/profile.png'/>
+                            <span className='fa-stack fa-5x'>
+                            <i className="fa fa-circle fa-stack-2x"></i>
+                            <i className="fa fa-coffee fa-stack-1x experience-icon"></i>
+                            </span>
                         </Col>
                     </Row>
                     <Row className='justify-content-start py-5 my-4'>
                         <Col className="col-md-2 col-2 offset-1 text-center my-auto">
-                            <Image className="experience-icon" roundedCircle src='/profile.png'/>
+                            <span className='fa-stack fa-5x'>
+                            <i className="fa fa-circle fa-stack-2x"></i>
+                            <i className="fa fa-database fa-stack-1x experience-icon"></i>
+                            </span>
                         </Col>
                         <Col className=" col-md-6 offset-2 p-4">
-                            <h6 className='display-6 fs-4'>B.S in Computer Science | Minor in Mathematics</h6>
-                            <h6 className='display-6 fs-6'>University of Arkansas at Little Rock - Donaghey Scholar Full ride Recipient</h6>
+                            <h6 className='display-6 fs-4'>Records Management Intern</h6>
+                            <h6 className='display-6 fs-6'>Arkansas Department of Energy and Environment</h6>
                             <blockquote className="blockquote fs-6">
-                                <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.consectetur adipiscing elit.
-                                    Integer posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                <p className="mb-0">As a part of the Records Management team, I worked directly with each division under AE&E. We maintained the document database to ensure all historical and compliance documentation was preserved.</p>
                             </blockquote>
                         </Col>
                     </Row>
                     <Row className='justify-content-start'>
                         <Col className=" col-md-6 offset-1 p-4">
-                            <h6 className='display-6 fs-4'>B.S in Computer Science | Minor in Mathematics</h6>
-                            <h6 className='display-6 fs-6'>University of Arkansas at Little Rock - Donaghey Scholar Full ride Recipient</h6>
+                            <h6 className='display-6 fs-4'>Customer Service Representative</h6>
+                            <h6 className='display-6 fs-6'>Bank of America through Teletech</h6>
                             <blockquote className="blockquote fs-6">
-                                <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.consectetur adipiscing elit.
-                                    Integer posuere erat a ante. Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                <p className="mb-0">As a reprentative for Bank of America CashPay customers, I worked directly with customers to provide solutions to their problems. Additionally, I created and distributed educational material to the customer service team to ensure consistency in our care. </p>
                             </blockquote>
                         </Col>
                         <Col className="col-md-2 col-2 offset-2 text-center my-auto">
-                            <Image className="experience-icon" roundedCircle src='/profile.png'/>
+                            <span className='fa-stack fa-5x'>
+                            <i className="fa fa-circle fa-stack-2x"></i>
+                            <i className="fa fa-comments fa-stack-1x experience-icon"></i>
+                            </span>
                         </Col>
                     </Row>
 

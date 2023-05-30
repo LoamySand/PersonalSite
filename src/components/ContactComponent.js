@@ -85,9 +85,9 @@ class Contact extends Component {
                 <div className="row row-content  text-center">
                     <div className="col-md-6 col-12 mb-0 p-5">
                         <h3 className='display-3 fs-1 mb-5'>Ways to Reach Me</h3>
-                        <address className='text-start'>
-                            <i className="fa fa-phone fa-2x me-4 mb-4"></i><span className='fs-4 mb-2'>(501) 444-2664</span><a role="button" className="btn btn-md btn-outline-primary p-2 px-3  w-25 float-end" href="tel:+5014442664"><i className="fa fa-phone"></i> Call</a> <br />
-                            <i className="fa fa-envelope fa-2x me-4 "></i><a className=' fs-4' href="mailto:confusion@food.net">laneeboyd@gmail.com</a> <a role="button" className="btn btn-outline-success p-2 px-2 w-25 ms-4 float-end" href="mailto:laneeboyd@gmail.com"><i className="fa fa-envelope-o"></i>  Email</a>
+                        <address className='text-start '>
+                            <i className="fa fa-phone fa-2x me-2 mb-5"></i><span className='fs-4 mb-2 pe-1'>(501) 444-2664</span><a role="button" className="btn btn-md btn-outline-primary p-2 px-3  w-25 float-end" href="tel:+5014442664"><i className="fa fa-phone"></i> Call</a> <br />
+                            <i className="fa fa-envelope fa-2x me-2 mb-1"></i><a className=' fs-4 pe-1' href="mailto:confusion@food.net">laneeboyd@gmail.com</a> <a role="button" className="btn btn-outline-success p-2 px-2 w-25 ms-4 float-end my-auto" href="mailto:laneeboyd@gmail.com"><i className="fa fa-envelope-o"></i>  Email</a>
                         </address>
                     </div>
                     <div className="col-md-6 col-12 mb-0 p-5">

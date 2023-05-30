@@ -81,7 +81,7 @@
 #bottom-nav a{
   color:#5C6C4F;
   font-size: medium;
-  margin: 0 .5vw ;
+  margin: 0 2vw ;
 }
 
 #bottom-nav a:hover:not(.active){
@@ -144,8 +144,17 @@
 /*  font-size: 1.5vw;*/
 /*}*/
 .experience-icon{
-  max-width: 10vw;
+  /*max-width: 10vw;*/
+  color: #5C6C4F;
 }
 textarea{
   max-width:100%;
+}
+
+.fa-circle {
+  color: #FFF585;
+}
+
+.fa-graduation-cap {
+  color: #5C6C4F;
 }

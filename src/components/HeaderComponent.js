@@ -7,14 +7,6 @@ class Header extends Component {
         return (
             <Navbar className='background' id='navbar'>
                 <Container>
-                    {/*<Navbar.Brand href="/">*/}
-                    {/*    <Image*/}
-                    {/*        src='/favicon.png' alt='profile'*/}
-                    {/*        width="60"*/}
-                    {/*        height="60"*/}
-                    {/*        roundedCircle*/}
-                    {/*        className="d-inline-block align-top rounded"/>*/}
-                    {/*</Navbar.Brand>*/}
                     <Nav id="topbar" className='ms-auto'>
                         <Nav.Item>
                             <NavLink className='nav-link'
@@ -22,12 +14,12 @@ class Header extends Component {
                                 <h5 className="nav-options">About</h5>
                             </NavLink>
                         </Nav.Item>
-                        <Nav.Item>
-                            <NavLink className='nav-link '
-                                     to='/portfolio'>
-                                <h5 className="nav-options">
-                                Portfolio</h5></NavLink>
-                        </Nav.Item>
+                        {/*<Nav.Item>*/}
+                        {/*    <NavLink className='nav-link '*/}
+                        {/*             to='/portfolio'>*/}
+                        {/*        <h5 className="nav-options">*/}
+                        {/*        Portfolio</h5></NavLink>*/}
+                        {/*</Nav.Item>*/}
                         <Nav.Item>
                             <NavLink className='nav-link'
                                      to='/contact'>
