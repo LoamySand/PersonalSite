@@ -8,7 +8,7 @@ function Home() {
         <div>
             <div className="background">
                 <div>
-                <Row className="text-center">
+                <Row className="text-center p-5">
                     <Col className="float-left ">
                         <Row className='justify-content-center'>
                             <Image className='w-75' src='/title.png'/>
@@ -166,7 +166,7 @@ function Home() {
                         </Col>
                         <Col className=" col-md-6 offset-2 p-4">
                             <h6 className='display-6 fs-4'>B.S in Computer Science | Minor in Mathematics</h6>
-                            <h6 className='display-6 fs-6'>University of Arkansas at Little Rock - Donaghey Scholar Full ride Recipient</h6>
+                            <h6 className='display-6 fs-6'>University of Arkansas at Little Rock - Donaghey Scholar Full Ride Recipient</h6>
                             <blockquote className="blockquote fs-6">
                                 <p className="mb-0">I spent four years deep diving into the state of the art, industry standard technologies that are used to build the world we see today. I designed and engineered software, hardware, operating systems, and databases. I gained insight into the fundamentals of information transfer and computation theory.</p>
                             </blockquote>

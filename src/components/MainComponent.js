@@ -14,7 +14,7 @@ class Main extends Component {
     render(){
         return(
             <div>
-                <Header/>
+                {/*<Header/>*/}
                 <Routes>
                     <Route exact path='/' element={Home()}/>
                     <Route exact path='/portfolio'/>
