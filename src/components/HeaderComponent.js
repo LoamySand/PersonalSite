@@ -14,12 +14,11 @@ class Header extends Component {
                                 <h5 className="nav-options">About</h5>
                             </NavLink>
                         </Nav.Item>
-                        {/*<Nav.Item>*/}
-                        {/*    <NavLink className='nav-link '*/}
-                        {/*             to='/portfolio'>*/}
-                        {/*        <h5 className="nav-options">*/}
-                        {/*        Portfolio</h5></NavLink>*/}
-                        {/*</Nav.Item>*/}
+                        <Nav.Item>
+                           <NavLink className='nav-link '
+                                    to='/portfolio'>
+                               <h5 className="nav-options">Portfolio</h5></NavLink>
+                        </Nav.Item>
                         <Nav.Item>
                             <NavLink className='nav-link'
                                      to='/contact'>

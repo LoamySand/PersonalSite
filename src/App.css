@@ -46,6 +46,18 @@
   background-color: #D3E7EB;
   /*width:100%;*/
 }
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
 .navbar{
   position: fixed;
   top: 0;
@@ -74,9 +86,9 @@
   color: #F5F0AF;
 }
 .footer {
-  background-color: #BBCFC6;;
+  background-color: #BBCFC6;
   color:#5C6C4F;
-  margin:auto;
+  width: 100%;
 }
 #bottom-nav a{
   color:#5C6C4F;

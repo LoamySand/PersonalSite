@@ -1,0 +1,79 @@
+.portfolio-container {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.portfolio-heading {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.portfolio-image-wrap {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1 1 auto;
+}
+
+.portfolio-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.portfolio-desc {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.portfolio-tags {
+  margin-top: 0.5rem;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #0f172a;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.portfolio-link {
+  margin-top: auto;
+  color: #0b5fff;
+  text-decoration: none;
+  font-weight: 600;
+}
