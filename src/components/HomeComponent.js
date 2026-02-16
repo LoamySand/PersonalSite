@@ -10,11 +10,11 @@ function Home() {
                 <div>
                 <Row className="text-center">
                     <Col className="float-left ">
-                        <Row className='justify-content-center'>
-                            <Image className='w-75' src='/title.png'/>
-                            <Image roundedCircle className='profile-pic w-50' src='/profile.png'/>
+                        <Row className='align-items-center justify-content-center pt-5'>
+                            <Image roundedCircle className='profile-pic w-25' src='/profile.png'/>
+                            <Image className='img-fluid, w-50 h-50' src='/title.png'/>
                         </Row>
-                        <Row className="mb-3 mt-3 intro-blurb">
+                        <Row className="mb-3 mt-5 intro-blurb">
                             <Stack>
                                 <h6 className='display-6 fs-3'>Developer by day,</h6>
                                 <h6 className='display-6 fs-4'>So very sleepy by night.</h6>
@@ -55,15 +55,15 @@ function Home() {
                                         <Table hover className="">
                                             <tbody>
                                             <tr className="skill">
-                                                <td>C++</td>
+                                                <td>T-SQL</td>
                                                 <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
                                                 <td>Javascript</td>
-                                                <td>⭐⭐⭐</td>
+                                                <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>Java</td>
+                                                <td>C++</td>
                                                 <td>⭐⭐⭐</td>
                                             </tr>
                                             </tbody>
@@ -73,11 +73,11 @@ function Home() {
                                         <Table hover className="">
                                             <tbody>
                                             <tr className="skill">
-                                                <td>SQL</td>
-                                                <td>⭐⭐</td>
+                                                <td>Python</td>
+                                                <td>⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>Python</td>
+                                                <td>Java</td>
                                                 <td>⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
@@ -103,12 +103,12 @@ function Home() {
                                         <Table hover className="">
                                             <tbody>
                                             <tr className="skill">
-                                                <td>Bootstrap</td>
+                                                <td>React JS</td>
                                                 <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>React</td>
-                                                <td>⭐⭐⭐</td>
+                                                <td>ExpressJS</td>
+                                                <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
                                                 <td>Express</td>
@@ -140,14 +140,6 @@ function Home() {
                         </Table>
                     </div>
                 </Row>
-                {/*<Row className='mb-lg-5'>*/}
-                {/*    <h3 className='display-3 fs-1'>Team Work</h3>*/}
-                {/*    <blockquote className="blockquote fs-5 pt-3">“Absorb what is useful, Discard what is not, Add what is uniquely your own.”</blockquote>*/}
-                {/*    <figcaption class='blockquote-footer fs-6'>Bruce Lee</figcaption>*/}
-                {/*    <div className='align-items-center'>*/}
-                {/*        Content*/}
-                {/*    </div>*/}
-                {/*</Row>*/}
                 <Row className="hr justify-content-center">
                     <Col md="auto" className="">
                         <h1 className='display-3 fs-1'>Previous Experience</h1>
@@ -173,6 +165,21 @@ function Home() {
                         </Col>
                     </Row>
                     <Row className='justify-content-start'>
+                        <Col className="col-md-2 col-2 offset-2 text-center my-auto">
+                            <span className='fa-stack fa-5x'>
+                            <i className="fa fa-circle fa-stack-2x"></i>
+                            <i className="fa fa-database fa-stack-1x experience-icon"></i>
+                            </span>
+                        </Col>
+                        <Col className=" col-md-6 offset-1 p-4">
+                            <h6 className='display-6 fs-4'>Associate Data Developer</h6>
+                            <h6 className='display-6 fs-6'>One80 Intermediaries</h6>
+                            <blockquote className="blockquote fs-6">
+                                <p className="mb-0">I work with data to drive insights and support decision-making processes. My role involves designing and implementing data solutions, ensuring data integrity, and collaborating with cross-functional teams to leverage data effectively.</p>
+                            </blockquote>
+                        </Col>
+                    </Row>
+                    <Row className='justify-content-start'>
                         <Col className=" col-md-6 offset-1 p-4">
                             <h6 className='display-6 fs-4'>Barista</h6>
                             <h6 className='display-6 fs-6'>Starbucks</h6>
@@ -191,7 +198,7 @@ function Home() {
                         <Col className="col-md-2 col-2 offset-1 text-center my-auto">
                             <span className='fa-stack fa-5x'>
                             <i className="fa fa-circle fa-stack-2x"></i>
-                            <i className="fa fa-database fa-stack-1x experience-icon"></i>
+                            <i className="fa fa-file fa-stack-1x experience-icon"></i>
                             </span>
                         </Col>
                         <Col className=" col-md-6 offset-2 p-4">

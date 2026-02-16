@@ -82,6 +82,7 @@ class Contact extends Component {
                         <h1 className='display-3 fs-1'>Get in Touch!</h1>
                     </Col>
                 </Row>
+                {/* 
                 <div className="row row-content  text-center">
                     <div className="col-md-6 col-12 mb-0 p-5">
                         <h3 className='display-3 fs-1 mb-5'>Ways to Reach Me</h3>
@@ -100,6 +101,7 @@ class Contact extends Component {
 
                     </div>
                 </div>
+                 */}
                 <div className="row message-form mb-4 w-100">
                     <div className="col-12 text-center">
                         <h3 className="display-3 fs-1 mb-5 ">Leave a message</h3>
