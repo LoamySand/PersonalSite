@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://LoamySand.github.io/PersonalSite",
   "dependencies": {
     "@fullcalendar/core": "^6.1.7",
     "@fullcalendar/daygrid": "^6.1.7",
@@ -40,7 +41,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +64,7 @@
     ]
   },
   "devDependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "gh-pages": "^6.3.0"
   }
 }
