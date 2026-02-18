@@ -5,26 +5,28 @@ import Resume from './ResumeComponent';
 
 
 function Home() {
+    const publicUrl = process.env.PUBLIC_URL;
+    
     return(
         <div>
             <div className="background">
                 <div>
                 <Row className="text-center">
-                    <Col className="float-left ">
-                        <Row className='align-items-center justify-content-center pt-5'>
-                            <Image className='profile-pic w-25' src='/profile.png'/>
-                            <Image className='img-fluid w-50 h-50' src='/title.png'/>
+                    <Col className="float-left profile-section">
+                        <Row className='align-items-center pt-5 flex-column'>
+                            <Image className='profile-pic' src={publicUrl + '/profile.png'}/>
+                            <Image className='img-fluid intro-blurb' src={publicUrl + '/title.png'}/>
                         </Row>
-                        <Row className="mb-3 mt-5 intro-blurb">
+                        <Row className="mx-auto mb-3 mt-5 intro-blurb">
                             <Stack>
                                 <h6 className='display-6 fs-3'>Developer by day,</h6>
                                 <h6 className='display-6 fs-4'>So very sleepy by night.</h6>
-                                <a className="btn btn-lg btn-primary w-25 mx-auto my-5"  href="https://whatspoppingabq.streamlit.app/" target="_blank" rel="noreferrer">Latest Demos</a>
+                                <a className="btn btn-lg btn-primary demos-btn mx-auto my-5"  href="https://whatspoppingabq.streamlit.app/" target="_blank" rel="noreferrer">Latest Demos</a>
                             </Stack>
                         </Row>
                     </Col>
                     <Col className='honeyComb'>
-                        <Image src='/honeycomb-placeholder.png' alt='profile'
+                        <Image src={publicUrl + '/honeycomb-placeholder.png'} alt='profile'
                                width="100%"
                                height="auto"
                                className="d-inline-block align-top float-end rounded  "/>
@@ -44,7 +46,7 @@ function Home() {
                     <figcaption className='blockquote-footer fs-6'>Bruce Lee</figcaption>
                     <div className='align-items-center'>
                         {/*TODO Move to SkillsComponent*/}
-                        <Table borderless className="skills-table d-inline-block m-4 ">
+                        <Table borderless className="skills-table d-inline-block m-3 ">
                             <thead className='text-start'>
                                 <tr>
                                     <th className='skill-title'>Languages</th>
@@ -58,15 +60,15 @@ function Home() {
                                             <tbody>
                                             <tr className="skill">
                                                 <td>T-SQL</td>
-                                                <td>⭐⭐⭐⭐</td>
+                                                <td>⭐⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
                                                 <td>Javascript</td>
                                                 <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>C++</td>
-                                                <td>⭐⭐⭐</td>
+                                                <td>Python</td>
+                                                <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             </tbody>
                                         </Table>
@@ -75,15 +77,15 @@ function Home() {
                                         <Table hover className="">
                                             <tbody>
                                             <tr className="skill">
-                                                <td>Python</td>
+                                                <td>C++</td>
+                                                <td>⭐⭐⭐</td>
+                                            </tr>
+                                            <tr className="skill">
+                                                <td>C#</td>
                                                 <td>⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
                                                 <td>Java</td>
-                                                <td>⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>C# .NET</td>
                                                 <td>⭐⭐</td>
                                             </tr>
                                             </tbody>
@@ -95,7 +97,7 @@ function Home() {
                         <Table borderless className="skills-table d-inline-block m-4">
                             <thead className='text-start'>
                                 <tr>
-                                    <th className='skill-title'>Frameworks</th>
+                                    <th className='skill-title'>Data & Backend</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -105,16 +107,16 @@ function Home() {
                                         <Table hover className="">
                                             <tbody>
                                             <tr className="skill">
-                                                <td>React JS</td>
+                                                <td>SQL Server/SSIS</td>
                                                 <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>ExpressJS</td>
+                                                <td>PostgreSQL</td>
                                                 <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>Express</td>
-                                                <td>⭐⭐⭐</td>
+                                                <td>ETL/Data Pipelines</td>
+                                                <td>⭐⭐⭐⭐</td>
                                             </tr>
                                             </tbody>
                                         </Table>
@@ -123,16 +125,16 @@ function Home() {
                                         <Table hover className="">
                                             <tbody>
                                             <tr className="skill">
-                                                <td>jQuery</td>
-                                                <td>⭐⭐</td>
+                                                <td>Prefect</td>
+                                                <td>⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>MongoDB</td>
-                                                <td>⭐⭐</td>
+                                                <td>Pandas</td>
+                                                <td>⭐⭐⭐</td>
                                             </tr>
                                             <tr className="skill">
-                                                <td>ASP.NET</td>
-                                                <td>⭐⭐</td>
+                                                <td>Selenium</td>
+                                                <td>⭐⭐⭐</td>
                                             </tr>
                                             </tbody>
                                         </Table>
@@ -140,6 +142,36 @@ function Home() {
                                 </tr>
                             </tbody>
                         </Table>
+                        <Table borderless className="skills-table d-inline-block m-4">
+                            <thead className='text-start'>
+                                <tr>
+                                    <th className='skill-title'>Frontend/Frameworks</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className='skills-row'>
+                                        <Table hover className="">
+                                            <tbody>
+                                            <tr className="skill">
+                                                <td>React</td>
+                                                <td>⭐⭐⭐⭐</td>
+                                            </tr>
+                                            <tr className="skill">
+                                                <td>Bootstrap</td>
+                                                <td>⭐⭐⭐⭐</td>
+                                            </tr>
+                                            <tr className="skill">
+                                                <td>jQuery</td>
+                                                <td>⭐⭐⭐⭐</td>
+                                            </tr>
+                                            </tbody>
+                                        </Table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </Table>                        
                     </div>
                 </Row>
                 <Row className="hr justify-content-center">
