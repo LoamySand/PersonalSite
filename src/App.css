@@ -4,16 +4,37 @@
 /*}*/
 
 :root {
+  /* Color Scheme */
+  --color-primary: #5C6C4F; /* Olive Green */
+  --color-accent: #D4AD51; /* Gold */
+  --color-hover: #F5F0AF; /* Light Yellow */
+  --color-background: #D3E7EB; /* Light Blue */
+  --color-footer: #BBCFC6; /* Grayish Blue */
+  --color-border: #e6e6e6; /* Light Gray */
+  --color-tag-bg: #f1f5f9; /* Very Light Blue */
+  --color-tag-text: #0f172a; /* Dark Blue */
+
+  /* Breakpoints */
   --bp-lg: 75rem; /* 1200px */
   --bp-md: 49.9375rem; /* 799px */
+
+  /* Layout */
   --max-width: 68.75rem; /* 1100px */
   --card-min-width: 16.25rem; /* 260px */
   --card-height: 8.75rem; /* 140px */
-  --radius-md: 0.5rem; /* 8px */
-  --radius-round: 62.4375rem; /* 999px */
+
+  /* Spacing */
   --spacing-lg: 1.25rem; /* 20px */
   --spacing-sm: 0.625rem; /* 10px */
   --spacing-md: 0.875rem; /* 14px */
+
+  /* Radius */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-round: 62.4375rem; /* 999px */
+
+  /* Legacy - for Bootstrap compatibility */
+  --bs-primary: var(--color-primary);
+  --bg-primary: var(--color-primary);
 }
 
 .App {
@@ -55,8 +76,75 @@
   }
 }
 
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:disabled {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: white !important;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+}
+
+/* Badge Primary Styling */
+.badge.bg-primary {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+/* Header Navigation Styling */
+.nav-link {
+  color: var(--color-primary) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+.nav-link.active {
+  color: var(--color-accent) !important;
+}
+
+/* Header Navbar */
+.header-navbar {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer Navigation Links */
+.footer-link {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/* Footer Social Buttons */
+.footer-social-btn {
+  border: 2px solid white !important;
+  color: white !important;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.footer-social-btn:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: white !important;
+}
 .background {
-  background-color: #D3E7EB;
+  background-color: var(--color-background);
   /*width:100%;*/
 }
 
@@ -90,43 +178,40 @@
 
 #topbar a {
   text-decoration: none;
-  color:#5C6C4F;
-
+  color: var(--color-primary);
 }
 .topbar a.active {
-  color: #D4AD51
+  color: var(--color-accent);
 }
 .topbar a:hover:not(.active) {
-  color: #F5F0AF;
+  color: var(--color-hover);
 }
 .footer {
-  background-color: #BBCFC6;
-  color:#5C6C4F;
+  background-color: var(--color-footer);
+  color: var(--color-primary);
   width: 100%;
   margin-top: auto;
 }
 #bottom-nav a{
-  color:#5C6C4F;
+  color: var(--color-primary);
   font-size: medium;
   margin: 0 2vw ;
 }
 
 .bottom-nav a:hover:not(.active){
-  color: #F5F0AF;
+  color: var(--color-hover);
 }
 .socials a{
-  color:#5C6C4F;
+  color: var(--color-primary);
   font-size: 2rem;
   margin: auto;
 }
 
 .socials a:hover {
-  color: #F5F0AF;
+  color: var(--color-hover);
 }
 .intro-blurb {
-  color:#5C6C4F;
-
-
+  color: var(--color-primary);
 }
 
 
@@ -135,10 +220,10 @@
   padding: 2%;
 }
 .row.hr{
-  background-color: #5C6C4F;
+  background-color: var(--color-primary);
   max-width:50%;
   margin: 0 auto 2.5%;
-  color: #F5F0AF;
+  color: var(--color-hover);
 }
 .skills-table{
   max-width: fit-content;
@@ -172,7 +257,7 @@
 /*}*/
 .experience-icon{
   /*max-width: 10vw;*/
-  color: #5C6C4F;
+  color: var(--color-primary);
 }
 textarea{
   max-width:100%;
@@ -183,5 +268,53 @@ textarea{
 }
 
 .fa-graduation-cap {
-  color: #5C6C4F;
+  color: var(--color-primary);
+}
+
+/* Map Component Styles */
+.map-h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: var(--spacing-lg);
+    padding-left: var(--spacing-sm);
+    text-align: center;
+}
+
+.google-map {
+    width: 100%;
+    height: 30vh;
+}
+
+.pin {
+    display: flex;
+    align-items: center;
+    width: 0;
+    color: var(--color-primary);
+}
+
+.pin-icon {
+    font-size: 0;
+}
+
+.pin-text {
+    font-size: 1.3em;
+}
+
+@media screen and (min-width: var(--bp-md)) {
+    .google-map {
+        height: 30vh;
+    }
+
+    .map-h2 {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .pin {
+        width: 0;
+    }
+
+    .pin-icon {
+        font-size: 0;
+    }
 }

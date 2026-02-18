@@ -1,6 +1,5 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import './map.css';
 import LocationPin from '../LocationPin';
 
 const API_KEY = process.env.REACT_APP_API_KEY;

@@ -5,17 +5,17 @@ import {NavLink} from "react-router-dom";
 class Header extends Component {
     render(){
         return (
-            <Navbar className='bg-light sticky-top navbar'>
+            <Navbar className='sticky-top navbar header-navbar'>
                 <Container>
                     <Nav className="ms-auto">
                         <Nav.Item>
-                            <NavLink className='nav-link text-secondary text-decoration-none' to='/'>About</NavLink>
+                            <NavLink className='nav-link text-decoration-none' to='/'>About</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                           <NavLink className='nav-link text-secondary text-decoration-none' to='/portfolio'>Portfolio</NavLink>
+                           <NavLink className='nav-link text-decoration-none' to='/portfolio'>Portfolio</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                            <NavLink className='nav-link text-secondary text-decoration-none' to='/contact'>Contact</NavLink>
+                            <NavLink className='nav-link text-decoration-none' to='/contact'>Contact</NavLink>
                         </Nav.Item>
                     </Nav>
                 </Container>
