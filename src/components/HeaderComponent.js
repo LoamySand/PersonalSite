@@ -9,13 +9,13 @@ class Header extends Component {
                 <Container>
                     <Nav className="ms-auto">
                         <Nav.Item>
-                            <NavLink className='nav-link text-decoration-none' to='/'>About</NavLink>
+                            <NavLink className='nav-link text-decoration-none mx-4' to='/'>About</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                           <NavLink className='nav-link text-decoration-none' to='/portfolio'>Portfolio</NavLink>
+                           <NavLink className='nav-link text-decoration-none mx-4' to='/portfolio'>Portfolio</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                            <NavLink className='nav-link text-decoration-none' to='/contact'>Contact</NavLink>
+                            <NavLink className='nav-link text-decoration-none mx-4' to='/contact'>Contact</NavLink>
                         </Nav.Item>
                     </Nav>
                 </Container>

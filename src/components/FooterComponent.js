@@ -7,15 +7,18 @@ class Footer extends Component {
         return (
             <footer className="footer w-100 mt-auto py-4">
                 <div className="container">
-                    <div className='row p-4'>
+                    <div className='row'>
                         <div className="col-md-6 col-12">
                             <Navbar className='justify-content-center'>
                                 <Nav className="nav">
                                     <Nav.Item>
-                                        <NavLink className='nav-link footer-link text-decoration-none' to='/'>Home</NavLink>
+                                        <NavLink className='nav-link footer-link text-decoration-none mx-4' to='/'>Home</NavLink>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <NavLink className='nav-link footer-link text-decoration-none' to='/Contact'>Contact</NavLink>
+                                        <NavLink className='nav-link footer-link text-decoration-none mx-4' to='/Portfolio'>Portfolio</NavLink>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <NavLink className='nav-link footer-link text-decoration-none mx-4' to='/Contact'>Contact</NavLink>
                                     </Nav.Item>
                                 </Nav>
                             </Navbar>

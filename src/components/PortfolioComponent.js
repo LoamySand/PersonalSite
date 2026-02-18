@@ -17,7 +17,7 @@ function Portfolio() {
 								<p className="card-text">{project.description}</p>
 								<div className="d-flex flex-wrap gap-3">
 									{project.tags.map(tag => (
-										<span key={tag} className="badge bg-primary">{tag}</span>
+										<span key={tag} className="badge badge-disabled fw-light">{tag}</span>
 									))}
 								</div>
 								{project.link && (
