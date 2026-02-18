@@ -12,13 +12,14 @@ function Home() {
                 <Row className="text-center">
                     <Col className="float-left ">
                         <Row className='align-items-center justify-content-center pt-5'>
-                            <Image roundedCircle className='profile-pic w-25' src='/profile.png'/>
-                            <Image className='img-fluid, w-50 h-50' src='/title.png'/>
+                            <Image className='profile-pic w-25' src='/profile.png'/>
+                            <Image className='img-fluid w-50 h-50' src='/title.png'/>
                         </Row>
                         <Row className="mb-3 mt-5 intro-blurb">
                             <Stack>
                                 <h6 className='display-6 fs-3'>Developer by day,</h6>
                                 <h6 className='display-6 fs-4'>So very sleepy by night.</h6>
+                                <a className="btn btn-lg btn-primary w-25 mx-auto my-5"  href="https://whatspoppingabq.streamlit.app/" target="_blank" rel="noreferrer">Latest Demos</a>
                             </Stack>
                         </Row>
                     </Col>
