@@ -1,18 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import './bee.css';
+import { ScrollContext } from '../ScrollContext';
 const beeImage = process.env.PUBLIC_URL + '/bee.png';
 
 const BeeComponent = ({ secretLink = '/' }) => {
   const [beePosition, setBeePosition] = useState({ x: 20, y: 0 });
   const [beeRotation, setBeeRotation] = useState(0);
   const [trail, setTrail] = useState([]);
-  const [isScrolling, setIsScrolling] = useState(true);
   const [beeOpacity, setBeeOpacity] = useState(1);
-  const scrollTimeoutRef = useRef(null);
+  const { isScrolling } = useContext(ScrollContext);
   const trailRef = useRef([]);
   
   const TRAIL_FADE_TIME = 5000; // Trail disappears after 5 seconds (in milliseconds)
-  const SCROLL_IDLE_TIME = 3000; // Time before bee starts fading (in milliseconds)
   const BEE_FADE_TIME = 2000; // Time for bee to fade out (in milliseconds)
 
   // Keep trail ref in sync with state
@@ -22,25 +21,14 @@ const BeeComponent = ({ secretLink = '/' }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolling(true);
       setBeeOpacity(1);
-      
-      // Clear existing timeout
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-      
-      // Set new timeout for fade effect
-      scrollTimeoutRef.current = setTimeout(() => {
-        setIsScrolling(false);
-      }, SCROLL_IDLE_TIME);
       
       const scrollY = window.scrollY;
       
       // Serpentine motion: use sine wave for X position, scroll for Y
       const waveAmplitude = 80; // How far left/right the bee travels
       const waveFrequency = 0.004; // How tight/loose the wave is
-      const scrollScale = 0.3; // Slow down the bee (0.3 = moves at 30% of scroll speed)
+      const scrollScale = 0.5; // Slow down the bee (0.3 = moves at 30% of scroll speed)
       
       const xPosition = 300 + Math.sin(scrollY * waveFrequency) * waveAmplitude;
       const yPosition = scrollY * scrollScale;
@@ -78,9 +66,6 @@ const BeeComponent = ({ secretLink = '/' }) => {
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
     };
   }, []);
 
@@ -91,7 +76,7 @@ const BeeComponent = ({ secretLink = '/' }) => {
         const now = Date.now();
         return prevTrail.filter(point => now - point.timestamp < TRAIL_FADE_TIME);
       });
-    }, 20); // Check every 100ms
+    }, 100); // Check every 100ms
 
     return () => clearInterval(interval);
   }, []);
@@ -99,6 +84,7 @@ const BeeComponent = ({ secretLink = '/' }) => {
   // Handle bee fade effect when not scrolling
   useEffect(() => {
     if (!isScrolling) {
+      setBeeOpacity(1);
       const fadeStartTime = Date.now();
       const interval = setInterval(() => {
         const elapsed = Date.now() - fadeStartTime;
@@ -111,6 +97,8 @@ const BeeComponent = ({ secretLink = '/' }) => {
       }, 50); // Update every 50ms
       
       return () => clearInterval(interval);
+    } else {
+      setBeeOpacity(1);
     }
   }, [isScrolling]);
 

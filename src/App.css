@@ -296,7 +296,7 @@ textarea {
    ======================================== */
 
 .profile-pic {
-  max-width: 200px !important;
+  max-width: 300px !important;
   width: 100% !important;
   border-radius: var(--radius-round) !important;
   height: auto !important;
@@ -328,7 +328,8 @@ img.intro-blurb {
 
 .honeyComb {
   overflow: hidden;
-  padding: 0 !important;
+  /* padding: 0 !important; */
+  opacity: 0.85;
 }
 
 /* ========================================
