@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <Navbar className='sticky-top navbar header-navbar' expand="md">
             <Container className='w-100 mx-2 d-flex align-items-center'>
-                <Navbar.Brand style={{ opacity: isScrolling ? 0 : 1, transition: 'opacity 0.3s ease-out' }}>
+                <Navbar.Brand style={{ opacity: isScrolling ? 0 : 1, transition: 'opacity 0.2s ease-out' }}>
                     <img src={process.env.PUBLIC_URL + '/bee.png'} alt="bee" style={{ height: '50px', width: 'auto' }} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -19,7 +19,7 @@ function App() {
       
       scrollTimeoutRef.current = setTimeout(() => {
         setIsScrolling(false);
-      }, 3000);
+      }, 1000);
     };
 
     window.addEventListener('scroll', handleScroll);

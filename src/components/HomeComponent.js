@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col, Image, Row, Stack, Table} from "react-bootstrap";
 import Resume from './ResumeComponent';
+import SkillsComponent from './SkillsComponent';
 
 
 
@@ -34,157 +35,28 @@ function Home() {
                 </Row>
                 </div>
             </div>
-            <div className="mid text-center">
-                <Row className="hr justify-content-center">
+            <div className="skills">
+                <Row className="hr  justify-content-center">
                     <Col md="auto" className="">
                         <h1 className='display-3 fs-1'>Skills at a Glance</h1>
                     </Col>
                 </Row>
-                <Row className='mb-lg-5'>
+                <Row className='text-center'>
                     <h3 className='display-3 fs-1'>Design and Development</h3>
-                    <blockquote className="blockquote fs-5 pt-3">“Absorb what is useful, Discard what is not, Add what is uniquely your own.”</blockquote>
-                    <figcaption className='blockquote-footer fs-6'>Bruce Lee</figcaption>
-                    <div className='align-items-center'>
-                        {/*TODO Move to SkillsComponent*/}
-                        <Table borderless className="skills-table d-inline-block m-3 ">
-                            <thead className='text-start'>
-                                <tr>
-                                    <th className='skill-title'>Languages</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className='skills-row'>
-                                        <Table hover className="">
-                                            <tbody>
-                                            <tr className="skill">
-                                                <td>T-SQL</td>
-                                                <td>⭐⭐⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>Javascript</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>Python</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </td>
-                                    <td className='skills-row'>
-                                        <Table hover className="">
-                                            <tbody>
-                                            <tr className="skill">
-                                                <td>C++</td>
-                                                <td>⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>C#</td>
-                                                <td>⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>Java</td>
-                                                <td>⭐⭐</td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </Table>
-                        <Table borderless className="skills-table d-inline-block m-4">
-                            <thead className='text-start'>
-                                <tr>
-                                    <th className='skill-title'>Data & Backend</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className='skills-row'>
-                                        <Table hover className="">
-                                            <tbody>
-                                            <tr className="skill">
-                                                <td>SQL Server/SSIS</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>PostgreSQL</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>ETL/Data Pipelines</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </td>
-                                    <td className='skills-row'>
-                                        <Table hover className="">
-                                            <tbody>
-                                            <tr className="skill">
-                                                <td>Prefect</td>
-                                                <td>⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>Pandas</td>
-                                                <td>⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>Selenium</td>
-                                                <td>⭐⭐⭐</td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </Table>
-                        <Table borderless className="skills-table d-inline-block m-4">
-                            <thead className='text-start'>
-                                <tr>
-                                    <th className='skill-title'>Frontend/Frameworks</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className='skills-row'>
-                                        <Table hover className="">
-                                            <tbody>
-                                            <tr className="skill">
-                                                <td>React</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>Bootstrap</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            <tr className="skill">
-                                                <td>jQuery</td>
-                                                <td>⭐⭐⭐⭐</td>
-                                            </tr>
-                                            </tbody>
-                                        </Table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </Table>                        
-                    </div>
+                    <blockquote className="blockquote fs-5 pt-3">“"No observational problem will not be solved by more data.”</blockquote>
+                    <figcaption className='blockquote-footer fs-6 mb-5'>Vera Rubin</figcaption>
+                    <SkillsComponent />
                 </Row>
                 <Row className="hr justify-content-center">
                     <Col md="auto" className="">
                         <h1 className='display-3 fs-1'>Previous Experience</h1>
                     </Col>
                 </Row>
-                <div className="mid">
                     <Resume />
-                </div>
+            </div>
 
             </div>
-        </div>
+        // </div>
     )
 }
 

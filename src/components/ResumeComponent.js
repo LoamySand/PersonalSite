@@ -30,7 +30,7 @@ function Resume() {
 					</div>
 				))}
 			</div>
-            <p>Complete CV and Resume available upon request.</p>
+            <p className="text-center">Complete CV and Resume available <a href="/">upon request.</a></p>
 		</div>
 	);
 }

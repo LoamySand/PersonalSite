@@ -23,7 +23,7 @@
   top: 0;
   cursor: pointer;
   z-index: 100;
-  transition: opacity 0.05s ease-out;
+  transition: opacity 0.1s ease-out;
   user-select: none;
   width: 32px;
   height: 32px;
@@ -47,10 +47,12 @@
   .bee-container {
     max-width: 20px;
     max-height: 20px;
+    transition: opacity 0.05s ease-out;
   }
   .bee-icon {
     max-width   : 10px !important;
     max-height  : 10px !important;
+    transition: opacity 0.05s ease-out;    
   }
     
 }

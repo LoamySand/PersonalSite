@@ -12,7 +12,7 @@ const BeeComponent = ({ secretLink = '/' }) => {
   const trailRef = useRef([]);
   
   const TRAIL_FADE_TIME = 5000; // Trail disappears after 5 seconds (in milliseconds)
-  const BEE_FADE_TIME = 2000; // Time for bee to fade out (in milliseconds)
+  const BEE_FADE_TIME = 500; // Time for bee to fade out (in milliseconds)
 
   // Keep trail ref in sync with state
   useEffect(() => {
@@ -94,7 +94,7 @@ const BeeComponent = ({ secretLink = '/' }) => {
         if (newOpacity <= 0) {
           clearInterval(interval);
         }
-      }, 50); // Update every 50ms
+      }, 30); // Update every 50ms
       
       return () => clearInterval(interval);
     } else {

@@ -3,7 +3,7 @@ import projects from './portfolioData';
 
 function Portfolio() {
 	return (
-		<div className="container py-5">
+		<div className="container p-3">
 			<h2 className="text-center mb-4">Portfolio</h2>
 			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 				{projects.map(project => (
@@ -12,7 +12,7 @@ function Portfolio() {
 							{project.image && (
 								<img src={project.image} alt={project.title} className="card-img-top"/>
 							)}
-							<div className="card-body">
+							<div className="card-body flex-wrap flex-column d-flex h-auto">
 								<h5 className="card-title">{project.title}</h5>
 								<p className="card-text">{project.description}</p>
 								<div className="d-flex flex-wrap gap-3">
@@ -21,7 +21,7 @@ function Portfolio() {
 									))}
 								</div>
 								{project.link && (
-									<a className="btn btn-primary mt-3" href={project.link} target="_blank" rel="noreferrer">View Project</a>
+									<a className="btn btn-primary mt-auto align-self-start" href={project.link} target="_blank" rel="noreferrer">View Project</a>
 								)}
 							</div>
 						</div>
