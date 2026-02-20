@@ -2,9 +2,9 @@ const experiences = [
   {
     id: 2,
     icon: 'fa-graduation-cap',
-    title: 'B.S in Computer Science | Minor in Mathematics',
-    subtitle: 'University of Arkansas at Little Rock - Donaghey Scholar Full ride Recipient',
-    description: 'I spent four years deep diving into the state of the art, industry standard technologies that are used to build the world we see today. I designed and engineered software, hardware, operating systems, and databases. I gained insight into the fundamentals of information transfer and computation theory.',
+    title: 'B.S. in Computer Science | Minor in Mathematics',
+    subtitle: 'University of Arkansas at Little Rock — Donaghey Scholar, Full Scholarship Recipient',
+    description: 'Studied software engineering, computer architecture, operating systems, databases, and computation theory.',
     startDate: 'August 2022',
     iconColor: 'fa-graduation-cap'
   },
@@ -13,7 +13,7 @@ const experiences = [
     icon: 'fa-database',
     title: 'Associate Data Developer',
     subtitle: 'One80 Intermediaries',
-    description: 'I work with data to drive insights and support decision-making processes. My role involves designing and implementing data solutions, ensuring data integrity, and collaborating with cross-functional teams to leverage data effectively.',
+    description: 'Develops and maintains ETL pipelines using SQL SSIS and C#/.NET to migrate and transform data across insurance platforms. Writes T-SQL queries, stored procedures, and views, monitors SQL job health, and ensures the secure handling of sensitive PII/PHI data.',
     startDate: 'March 2025',
     iconColor: 'fa-database'
   },
@@ -22,8 +22,8 @@ const experiences = [
     icon: 'fa-coffee',
     title: 'Shift Supervisor',
     subtitle: 'Starbucks',
-    description: 'Through this humble beginning, I learned essential teamwork skills. Constantly pushing the team to perform better and better. We worked tirelessly to provide the best possible experience for each guest and create a sacred and friendly \'Third Place\', strengthening our empathy and communication skills in the process.',
-    startDate: 'March 2021',
+    description: 'Led shift operations and coached a team to consistently deliver high-quality customer experiences. Developed communication, leadership, and conflict-resolution skills in a fast-paced environment.',
+    startDate: 'June 2022',
     iconColor: 'fa-circle'
   },
   {
@@ -31,19 +31,10 @@ const experiences = [
     icon: 'fa-file',
     title: 'Records Management Intern',
     subtitle: 'Arkansas Department of Energy and Environment',
-    description: 'As a part of the Records Management team, I worked directly with each division under AE&E. We maintained the document database to ensure all historical and compliance documentation was preserved.',
-    startDate: 'May 2020',
+    description: 'Collaborated with divisions across AE&E to maintain a compliance document database, ensuring accurate preservation of historical and regulatory records.',
+    startDate: 'August 2021',
     iconColor: 'fa-file'
   },
-//   {
-//     id: 5,
-//     icon: 'fa-comments',
-//     title: 'Customer Service Representative',
-//     subtitle: 'Bank of America through Teletech',
-//     description: 'As a representative for Bank of America CashPay customers, I worked directly with customers to provide solutions to their problems. Additionally, I created and distributed educational material to the customer service team to ensure consistency in our care.',
-//     startDate: 'January 2020',
-//     iconColor: 'fa-comments'
-//   }
 ];
 
 export default experiences;

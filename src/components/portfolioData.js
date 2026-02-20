@@ -2,8 +2,8 @@ const projects = [
   {
     id: 1,
     title: 'Personal Site - Yes! This one!',
-    description: 'My personal website built with React showing projects and contact info.',
-    tags: ['React', 'CSS', 'Responsive Web Design'],
+    description: "A React portfolio site — you're looking at it. Responsive, clean, and built from scratch.",
+    tags: ['React', 'CSS'],
     demoLink: null,
     codeLink: 'https://github.com/LoamySand/PersonalSite/tree/gh-pages'
   },
@@ -11,7 +11,7 @@ const projects = [
     id: 2,
     title: 'BackOfYourHand.org',
     description: 'A learning experience for the directionally challenged. Back Of Your Hand is a MERN-stack geography game that challenges players to locate streets on a map. ',
-    tags: ['React', 'ExpressJS', 'MongoDB', 'CI/CD',],
+    tags: ['React', 'ExpressJS', 'MongoDB'],
     demoLink: 'https://www.backofyourhand.org/',
     codeLink: 'https://github.com/LoamySand/BackOfYourHand'
   },
@@ -26,8 +26,8 @@ const projects = [
   {
     id: 3,
     title: 'Salvation Army Resident Services Tracker',
-    description: 'Capstone project requested by the Salvation Army to create a software solution for aggregation and reporting of shelter visits and services.',
-    tags: ['ExpressJS', 'MongoDB', 'Typescript'],
+    description: 'A shelter management tool built for the Salvation Army to streamline tracking of resident visits and services, with built-in reporting.',
+    tags: ['ExpressJS', 'MongoDB', 'TypeScript'],
     demoLink: null,
     codeLink: 'https://github.com/LoamySand/CodeColonels'
   },

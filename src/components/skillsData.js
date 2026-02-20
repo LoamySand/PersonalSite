@@ -1,32 +1,33 @@
 export const skillsData = [
   {
-    category: "Languages",
-    skills: [
-      { name: "T-SQL", rating: "⭐⭐⭐⭐⭐" },
-      { name: "Javascript", rating: "⭐⭐⭐⭐" },
-      { name: "Python", rating: "⭐⭐⭐⭐" },
-      { name: "C++", rating: "⭐⭐⭐" },
-      { name: "C#", rating: "⭐⭐⭐" },
-      { name: "Java", rating: "⭐⭐" },
-    ],
-  },
-  {
     category: "Data & Backend",
     skills: [
-      { name: "SQL Server/SSIS", rating: "⭐⭐⭐⭐" },
-      { name: "PostgreSQL", rating: "⭐⭐⭐⭐" },
-      { name: "ETL/Data Pipelines", rating: "⭐⭐⭐⭐" },
-      { name: "Prefect", rating: "⭐⭐⭐" },
-      { name: "Pandas", rating: "⭐⭐⭐" },
-      { name: "Selenium", rating: "⭐⭐⭐" },
+      { name: "SQL Server/SSIS", level: "expert" },
+      { name: "PostgreSQL", level: "expert" },
+      { name: "ETL/Data Pipelines", level: "expert" },
+      { name: "Prefect", level: "familiar" },
+      { name: "Pandas", level: "familiar" },
+      { name: "Selenium", level: "familiar" },
     ],
   },
   {
-    category: "Frontend/Frameworks",
+    category: "Languages & Frameworks",
     skills: [
-      { name: "React", rating: "⭐⭐⭐⭐" },
-      { name: "Bootstrap", rating: "⭐⭐⭐⭐" },
-      { name: "jQuery", rating: "⭐⭐⭐⭐" },
+      { name: "JavaScript", level: "expert" },
+      { name: "Python", level: "expert" },
+      { name: "React", level: "expert" },
+      { name: "Express", level: "expert" },
+      { name: "C#", level: "familiar" },
+      { name: "C++", level: "familiar" },
+    ],
+  },
+  {
+    category: "Tools & Web",
+    skills: [
+      { name: "Git", level: "expert" },
+      { name: "CSS/HTML", level: "expert" },
+      { name: "Bootstrap", level: "expert" },
+      { name: "jQuery", level: "familiar" },
     ],
   },
 ];
