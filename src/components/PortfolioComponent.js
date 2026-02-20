@@ -20,9 +20,14 @@ function Portfolio() {
 										<span key={tag} className="badge badge-disabled fw-light">{tag}</span>
 									))}
 								</div>
-								{project.link && (
-									<a className="btn btn-primary mt-auto align-self-start" href={project.link} target="_blank" rel="noreferrer">View Project</a>
-								)}
+								<div className="d-flex flex-wrap gap-4 mt-auto align-self-start">
+									{project.demoLink && (
+										<a className="btn btn-primary" href={project.demoLink} target="_blank" rel="noreferrer">View Demo</a>
+									)}
+									{project.codeLink && (
+										<a className="btn btn-primary" href={project.codeLink} target="_blank" rel="noreferrer">View Code</a>
+									)}
+								</div>
 							</div>
 						</div>
 					</div>
