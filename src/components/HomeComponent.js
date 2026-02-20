@@ -36,12 +36,12 @@ function Home() {
                 </div>
             </div>
             <div className="skills">
-                <Row className="hr  justify-content-center">
+                <Row className="hr justify-content-center">
                     <Col md="auto" className="">
                         <h1 className='display-3 fs-1'>Skills at a Glance</h1>
                     </Col>
                 </Row>
-                <Row className='text-center'>
+                <Row className='text-center mt-5'>
                     <h3 className='display-3 fs-1'>Design and Development</h3>
                     <blockquote className="blockquote fs-5 pt-3">“"No observational problem will not be solved by more data.”</blockquote>
                     <figcaption className='blockquote-footer fs-6 mb-5'>Vera Rubin</figcaption>

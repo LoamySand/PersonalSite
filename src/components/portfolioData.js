@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 1,
+    id: 5,
     title: 'Personal Site - Yes! This one!',
     description: "A React portfolio site — you're looking at it. Responsive, clean, and built from scratch.",
     tags: ['React', 'CSS'],
@@ -16,7 +16,7 @@ const projects = [
     codeLink: 'https://github.com/LoamySand/BackOfYourHand'
   },
   {
-    id: 4,
+    id: 1,
     title: "What's Popping ABQ?",
     description: 'Automated data pipeline analyzing the impact of events on local traffic, businesses, and community sentiment in Albuquerque, NM.',
     tags: ['Python', 'Prefect', 'PostgreSQL', 'Docker'],

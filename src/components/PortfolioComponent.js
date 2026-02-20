@@ -2,11 +2,14 @@ import React from 'react';
 import projects from './portfolioData';
 
 function Portfolio() {
+	// Sort projects by ID
+	const sortedProjects = [...projects].sort((a, b) => a.id - b.id);
+
 	return (
 		<div className="container p-3">
 			<h2 className="text-center mb-4">Portfolio</h2>
-			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-				{projects.map(project => (
+			<div className="row row-cols-1 row-cols-md-2 g-3">
+				{sortedProjects.map(project => (
 					<div key={project.id} className="col">
 						<div className="card h-100 p-4 m-2">
 							{project.image && (

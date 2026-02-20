@@ -18,7 +18,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     gap: '4rem',
-    padding: '1rem 0 4rem',
+    padding: '0 3rem 3rem',
     maxWidth: '700px',
     margin: '0 auto',
   },

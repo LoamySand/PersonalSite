@@ -66,23 +66,6 @@ let FormCode = props => {
                     <Field name='tel' component={renderField} label='Your Phone Number'/>
                 </Form.Group>
                 <Form.Group>
-                    <label>Preferred Contact Method</label>
-                    <Row className="ms-1 mb-3 mt-2">
-                        <Col className='col-2'>
-                            <Field name="preferredContact" className="form-check" component={"input"} type='radio' value='email' id='email' checked/>
-                            <label htmlFor="email" className="form-check-label">Email</label>
-                        </Col>
-                        <Col className='col-2'>
-                            <Field name="preferredContact" className="form-check" component={"input"} type='radio' value='text' label='text'/>
-                            <label htmlFor="email" className="form-check-label">Text</label>
-                        </Col>
-                        <Col className='col-2'>
-                            <Field name="preferredContact" className="form-check" component={"input"} type='radio' value='phone' label='phone'/>
-                            <label htmlFor="email" className="form-check-label">Phone</label>
-                        </Col>
-                    </Row>
-                </Form.Group>
-                <Form.Group>
                     <Field name='message' component={renderTextField} label='Message'/>
                 </Form.Group>
                 <Button type='submit' disabled={pristine || submitting}  className='ms-3 btn-lg'>Submit</Button>

@@ -114,6 +114,7 @@ textarea {
   background-color: var(--color-primary);
   max-width: 50%;
   margin: 1rem auto !important; /* Add !important to override the margin-top */
+  padding-top: 0.25rem;
   color: var(--color-hover);
   text-align: center;
 }
@@ -509,6 +510,7 @@ img.intro-blurb {
   /* padding: 1rem; */
   /* padding-left: 1.5rem; */
   background-color: #f8f9fa;
+  text-align: left;
 }
 
 .timeline-content .blockquote p {
