@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import './bee.css';
 import { ScrollContext } from '../ScrollContext';
-const beeImage = process.env.PUBLIC_URL + '/bee.png';
+const beeImage = process.env.PUBLIC_URL + '/bee.webp';
 
 const BeeComponent = ({ secretLink = '/' }) => {
   const [beePosition, setBeePosition] = useState({ x: 20, y: 0 });

@@ -15,8 +15,8 @@ function Home() {
                 <Row className="text-center">
                     <Col className="float-left profile-section">
                         <Row className='align-items-center pt-5 flex-column'>
-                            <Image className='profile-pic' src={publicUrl + '/profile.png'}/>
-                            <Image className='img-fluid intro-blurb' src={publicUrl + '/title.png'}/>
+                            <Image className='profile-pic' src={publicUrl + '/profile.webp'}/>
+                            <Image className='img-fluid intro-blurb' src={publicUrl + '/title.webp'}/>
                         </Row>
                         <Row className="mx-auto mb-3 mt-5 intro-blurb">
                             <Stack>
@@ -27,7 +27,7 @@ function Home() {
                         </Row>
                     </Col>
                     <Col className='honeyComb'>
-                        <Image src={publicUrl + '/honeycomb-placeholder.png'} alt='profile'
+                        <Image src={publicUrl + '/honeycomb-placeholder.webp'} alt='profile'
                                width="100%"
                                height="auto"
                                className="d-inline-block align-top float-end rounded  "/>
